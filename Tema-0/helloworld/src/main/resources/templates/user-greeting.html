@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello World</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+<h1 th:text="${message}">Mensaje por defecto</h1>
+
+<!-- Aquí recorremos la lista 'users' y usamos la variable temporal 'user' -->
+<ul>
+    <li th:each="user : ${users}">
+        Hola <span th:text="${user.name}">Nombre</span>,
+        tu email es <span th:text="${user.email}">Email</span>.
+    </li>
+</ul>
+</body>
+</html>
